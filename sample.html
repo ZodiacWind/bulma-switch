@@ -1,0 +1,31 @@
+<html class="theme-light">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+        <link rel="stylesheet" href="dist/css/bulma-switch.min.css">
+        <script>
+            function init() {
+                const switchDarkModeInput = document.getElementById('switchDarkMode');
+                function toggleDarkMode() {
+                    const darkModeIsEnabled = switchDarkModeInput.checked;
+                    document.documentElement.className=`theme-${darkModeIsEnabled ? 'dark' : 'light'}`
+                }
+                switchDarkModeInput.addEventListener('click', toggleDarkMode);
+                toggleDarkMode();
+            }
+        </script>
+        </head>
+    <body onload="init()">
+        <div class="field"><input id="switchDarkMode" type="checkbox" name="switchDarkMode" class="switch is-text"><label for="switchDarkMode">Enable Dark Mode</label></div>
+        <div class="field"><input id="switchLinkExample" type="checkbox" name="switchLinkExample" class="switch is-link" checked="checked"><label for="switchLinkExample">Link</label></div>
+        <div class="field"><input id="switchPrimaryExample" type="checkbox" name="switchPrimaryExample" class="switch is-primary" checked="checked"><label for="switchPrimaryExample">Primary</label></div>
+        <div class="field"><input id="switchInfoExample" type="checkbox" name="switchInfoExample" class="switch is-info" checked="checked"><label for="switchInfoExample">Info</label></div>
+        <div class="field"><input id="switchSuccessExample" type="checkbox" name="switchSuccessExample" class="switch is-success" checked="checked"><label for="switchSuccessExample">Success</label></div>
+        <div class="field"><input id="switchWarningExample" type="checkbox" name="switchWarningExample" class="switch is-warning" checked="checked"><label for="switchWarningExample">Warning</label></div>
+        <div class="field"><input id="switchDangerExample" type="checkbox" name="switchDangerExample" class="switch is-danger" checked="checked"><label for="switchDangerExample">Danger</label></div>
+        <div class="field"><input id="switchWhiteExample" type="checkbox" name="switchWhiteExample" class="switch is-white" checked="checked"><label for="switchWhiteExample">White</label></div>
+        <div class="field"><input id="switchBlackExample" type="checkbox" name="switchBlackExample" class="switch is-black" checked="checked"><label for="switchBlackExample">Black</label></div>
+        <div class="field"><input id="switchLightExample" type="checkbox" name="switchLightExample" class="switch is-light" checked="checked"><label for="switchLightExample">Light</label></div>
+        <div class="field"><input id="switchDarkExample" type="checkbox" name="switchDarkExample" class="switch is-dark" checked="checked"><label for="switchDarkExample">Dark</label></div>
+        <div class="field"><input id="switchTextExample" type="checkbox" name="switchTextExample" class="switch is-text" checked="checked"><label for="switchTextExample">Text</label></div>
+    </body>
+</html>
